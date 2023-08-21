@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
+}
+
+body {
+    width:100vw;
+    height: 100vh;
+    border:0;
+    margin: 0;
+    background-color: #873340;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outside-design {
+    position: relative;
+    width:30%;
+    height:70%;
+    border:0;
+    margin: 0;
+    background-color: #fde2cd;
+    display:flex;
+    align-items: center;
+    border-radius: 25px;
+    padding:2%;
+    justify-content: center;
+    box-shadow: 0 0 50px black; /*그림자 크기 조절하기*/
+}
+h1 {
+    padding-bottom:20px;
+    font-family: Roboto, serif;
+    color:#FFE3E7;
+    height:5%;
+}
+form{
+    background-image:url("/pictures/MeatTexture.jpg"); /*나중에 더 자연스러운 무료이미지로 바꾸기 */
+}
+
+.login {
+    position: relative;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    border:0;
+    background-color: #C06570;
+    padding: 40px 30px 30px 30px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 1px 1px 13px 1px black inset; /*들어간 효과 뺄지말지*/
+}
+.div-input {
+
+    display:block;
+    height:10%;
+    background-color:#FFE3E7;
+    border-radius: 25px;
+    font-size: 16px; /*버튼 div 이름 나누기*/
+    border: 0;
+    padding: 10px 10px;
+    margin: 15px -10px;
+    width: 100%;
+}
+.div-btn {
+    font-family: Roboto, serif;
+    font-size: 20px;
+    color: #FFE3E7;
+    margin:0;
+    display:block;
+    float:left;
+    width:40%;
+    height:15%;
+    background-color: #873340;
+    border-radius: 25px;
+    border:0;
+}
+div {
+    margin:0;
+    border: 0;
+}
+
+.signup-circle-btn {
+    position:absolute;
+    font-family: Roboto, serif;
+    font-size:20px;
+    text-align:center;/*무시되나*/
+    overflow: hidden;
+    color:#873340;
+    background-color:#fde2cd;
+    left:83%;
+    width:12%;
+    height:11%;
+    /*패딩 마진 등등 계산해서 원 비율 고치기 <버튼크기>*/
+    border-radius: 50%;
+    border:0;
+    margin:0;
+    box-shadow: 1px 1px 3px 1px black;
+}
+
+.signup-circle-btn:hover{
+    background-color:yellow;
+}
+
+.signup-id {
+    height:6%;
+    background-color:#FFE3E7;
+    border-radius: 25px;
+    font-size: 16px; /*버튼 div 이름 나누기*/
+    border: 0;
+    padding: 15px 10px;
+    width: 100%;
+}
+.signup-password {
+    height:6%;
+    background-color:#FFE3E7;
+    border-radius: 25px;
+    font-size: 16px; /*버튼 div 이름 나누기*/
+    border: 0;
+    padding: 15px 10px;
+    width: 100%;
+
+}
+.signup-doubleCheckPassword {
+    height:6%;
+    background-color:#FFE3E7;
+    border-radius: 25px;
+    font-size: 16px; /*버튼 div 이름 나누기*/
+    border: 0;
+    padding: 15px 10px;
+    width: 100%;
+
+}
+.signup-email {
+    height:6%;
+    background-color:#FFE3E7;
+    border-radius: 25px;
+    font-size: 16px; /*버튼 div 이름 나누기*/
+    border: 0;
+    padding: 15px 10px;
+    width:calc(50% - 20px);
+    margin:0;
+}
+select{
+    border:0;
+    padding:0;
+    vertical-align: middle;
+}
+input{
+    vertical-align: middle;
+}
+.signup-emailSelectBox {
+    height:7%; /*인식 안 되는 것 같음*/ /*걍 absolute써서 옮길까*/
+    background-color:#FFE3E7;
+    border-radius: 25px;
+    font-size: 16px; /*버튼 div 이름 나누기*/
+    border: 0;
+    padding: 17px 10px; /*input과 select 태그의 크기 계산은 다르다 (기본 default 값*/
+    width:calc(50% - 20px);
+}
+.signup-birthdate {
+    height:6%;
+    background-color:#FFE3E7;
+    border-radius: 25px;
+    padding: 15px 10px;
+    font-size: 16px; /*버튼 div 이름 나누기*/
+    border: 0;
+    width: 100%;
+
+}
+.signup-phonenumber {
+    height:6%;
+    background-color:#FFE3E7;
+    border-radius: 25px;
+    font-size: 16px; /*버튼 div 이름 나누기*/
+    border: 0;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+.label-size {
+    width: 90%;
+}
+
+/*전체적인 비율 안 맞음 login 글자 없앨지 말지 고민 한국어버전으로 바꾸기 폰트*/
+
+

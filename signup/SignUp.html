@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/SignUp.css">
+    <title>SignUp</title>
+</head>
+<body>
+<div class="outside-design">
+    <form class="login">
+        <div>
+            <h1>Sign Up</h1>
+        </div>
+
+        <label class="label-size">
+            <input class="signup-id" type="text" name="userId" placeholder="아이디 입력(8~20자)">
+        </label>
+        <label class="label-size">
+            <input class="signup-password" type="password" name="userPassword" placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 8~20자)">
+        </label>
+        <label class="label-size">
+            <input class="signup-doubleCheckPassword" type="password" name="userCheckPassword" placeholder="비밀번호 확인">
+        </label>
+        <label class="label-size">
+            <input class="signup-email" type="email" name="userEmail" placeholder="이메일 주소">
+            <select name="domain" class="signup-emailSelectBox">
+                <option value="">직접입력</option>
+                <option value="naver">@naver.com</option>
+                <option value="gmail">@gmail.com</option>
+            </select>
+        </label>
+        <label class="label-size">
+            <input class="signup-birthdate" type="password" name="userBirthDate" placeholder="생년월일">
+        </label>
+        <label class="label-size">
+            <input class="signup-phonenumber" type="tel" name="userPhoneNumber" placeholder="010-0000-0000">
+        </label>
+        <button class="div-btn" type="submit">Sign Up</button>
+    </form>
+</div>
+
+</body>
+</html>
