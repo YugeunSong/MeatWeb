@@ -3,6 +3,11 @@
     src: url('/fonts/Roboto/Roboto-Black.ttf') format('truetype');
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     width:100vw;
     height: 100vh;
@@ -101,6 +106,10 @@ div {
 
 .signup-circle-btn:hover{
 background-color:yellow;
+}
+
+.btn-wrap {
+
 }
 
 /*전체적인 비율 안 맞음 login 글자 없앨지 말지 고민 한국어버전으로 바꾸기 폰트*/

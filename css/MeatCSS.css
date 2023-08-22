@@ -1,93 +1,165 @@
-html, body {
-    height: 100%;
+* {
     margin: 0;
+    padding: 0; /*전체 비율 초기화*/
+    box-sizing: border-box;
 }
 
-header, nav, aside, main {
-    border: 1px solid yellow;
+body {
+    background-color: #873340;
 }
-article {
-    background-color: coral;
-    border: 1px solid crimson;
-}
-section {
-    background-color: darkorchid;
-    border: 1px solid hotpink;
+
+ul, li {
+    list-style:none;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color:inherit;
 }
-.headerbar{
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
+
+/*==============================================================*/
+
+.site-wrap {
+    width: 100%;
 }
-.headerlogo{
-    font-size: 50px;
-    letter-spacing: 20px;
-    color: #9E3332;
+
+header {
+    width: 100%;
+    background-color: wheat;
 }
-.navbar {
-    background-color: #9E3332;
-    display:flex;
-    justify-content: right;
-    padding: 0 15px;
+
+section {
+    margin: auto;
+    width: 60%
 }
-.navmenu {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    font-size: 12px;
-}
-.navmenu li {
-    padding: 0 12px;
-}
-.asidebar {
-    float:left;
+
+header > div.nav-inner {
+    margin: auto;
     display:flex;
     justify-content: space-between;
-    flex-direction: column;
+    width: 60%;
+    background-color: red;
+    padding: 15px;
+}
+
+header > div > div {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+header > div > div.nav-bar > ul > li { /*헤더 배너 가로 정렬*/
+    display: inline-block;
+}
+
+header > div > div.login > ul > li { /*헤더 로그인 회원가입 가로 정렬*/
+    display: inline-block;
+}
+
+/*==============================================================*/
+/*게시글*/
+.content-wrap {
+    width: 100%;
+    background-color: #C06570;
+}
+
+.board-wrap {
+    width: 100%;
+    margin: auto;
+    background-color: #FFE3E7;
+}
+
+.board-title strong {
+    font-size: 3rem;
+}
+
+.board-list {
+    border-top: 2px solid black;
+}
+
+.board-list > div.board-list-top {
+    border-bottom: 2px solid black;
+}
+
+.board-list > div {
+    border-bottom: 1px solid grey;
+    font-size:0;
+}
+
+.board-list .title {
+    text-align: center;
+}
+
+.board-list > div > div {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.board-list > div:last-child {
+    border-bottom: 2px solid black;
+}
+
+.board-list .num {
     width: 10%;
-    height: 100%;
-    background-color: #9E3332;
-}
-.asidemenu {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    list-style: none;
-    font-size: 10px;
-}
-.asidemenu li {
-    padding: 1px 0;
-}
-.asidemenu2 {
-    list-style: none;
-    font-size: 10px;
-}
-.section1 {
-    float:left;
-    display:block;
-    padding: 5%;
-    width: calc(100% - (20% + 4px)); /*보더 *2 (aside의 보더 1+1px section보더 2px = 4px  section padding 5% * 2  + aside width 10%*/
-    height: calc(100% - (10% + 44px));
-}
-.articlesize {
-    width: 20%;
-    height: 30%;
 }
 
-.footer1 {
-    height: 30%;
+.board-list .title {
+    width: 50%;
+    text-align:left;
+}
+
+.board-list .board-list-top .title{
+    text-align:center;
+}
+
+.board-list .writer {
+    width: 15%;
+}
+
+.board-list .date {
+    width: 10%;
+}
+
+.board-list .count {
+    width: 5%;
+}
+
+.board-list .good {
+    width: 5%;
+}
+
+.board-list .comment-num {
+    color:red;
+}
+
+/*==============================================================*/
+/*하단 페이지*/
+.board-page {
+    margin-top: 30px;
+    font-size: 0;
+    text-align: center;
+}
+.board-page a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-left: 0;
+}
+
+.board-page a.first {
+    border-left: 1px solid grey;
+}
+
+.board-page a.on {
     background-color: black;
-    display: flex;
-    justify-content: center;
-}
+    color: white;
 
+}
 /*header, nav, section, aside, article, main {*/
 /*    border: 1px solid red;*/
 /*    background-color: lightgray;*/
