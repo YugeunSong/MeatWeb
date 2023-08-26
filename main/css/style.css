@@ -1,5 +1,6 @@
 @import url(reset.css);
 @import url(media.css);
+
 * {
     box-sizing: border-box;
 } /*공부*/
@@ -18,47 +19,47 @@ body {
 }
 
 /*=====================================================*/
-/*=================header===========================*/
-#wrap, #header {
-    width: 100%;
+/*===================nav============*/
+
+/*게시판에 들어갈 것
+자유게시판, 정육 팁 게시판, 식육 실시간 시세? */
+
+
+#nav {
+    background-color: darksalmon;
 }
 
-#header {
-    background-color: skyblue;
-}
-
-#header-inner {
+#nav-inner {
     display:flex;
-    flex-direction: column;
     margin: auto;
+    justify-content: space-between;
+    align-items: center;
     width: 1280px;
+    height: 60px;
     background-color: darkslateblue;
 }
 
-.header-top-wrap {
-    display: flex;
-    justify-content: space-between;
-    background-color: darkcyan;
-}
-
-.semi-login {
-    width: 350px;
-    background-color: slateblue;
-}
-.header-bottom-wrap {
-    display:flex;
+/*----게시판----*/
+.board-wrap {
     width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: mediumseagreen;
 }
 
+/*----nav 로고----*/
 .logo-wrap {
     display:flex;
+    width: 500px;
+    height: 100%;
     align-items: center;
     background-color: coral;
 }
-
+/*------검색창-----*/
 .search-wrap {
-    width: 650px;
+    width: 450px;
     height: 55px;
     background-color: darkorchid;
 }
@@ -133,6 +134,31 @@ body {
 }
 */
 
+/*=================header===========================*/
+#wrap, #header #nav {
+    width: 100%;
+}
+
+#header {
+    background-color: skyblue;
+}
+
+#header-inner {
+    display:flex;
+    margin: auto;
+    width: 1280px;
+    background-color: darkkhaki;
+}
+
+.banner-img-wrap {
+    width: 100%;
+}
+
+.semi-login-wrap {
+    width: 350px;
+    background-color: slateblue;
+}
+
 /*================================================================*/
 /*=================main===========================*/
 
@@ -147,50 +173,6 @@ body {
     height: 900px;
     background-color: palegreen;
 }
-/*===================nav============*/
-
-/*게시판에 들어갈 것
-자유게시판, 정육 팁 게시판, 식육 실시간 시세? */
-
-#nav {
-    width: 350px;
-}
-
-
-#aside {
-    width: 350px;
-}
-
-#nav {
-    background-color: darksalmon;
-}
-
-#nav-wrap {
-    background-color: dodgerblue;
-    margin-top: 10px;
-    position: sticky;
-    top:0;
-}
-
-.board-list-area {
-    padding: 15px; /*조절*/
-    background-color: indigo;
-    border: 2px solid #873340;
-    border-radius: 25px;
-}
-
-.board-list > .title {
-    display: flex;
-    border: 1px solid black;
-    justify-content: center;
-    background-color: white;
-}
-
-.board-list > .sub-list > div {
-    border: 1px solid grey;
-    background-color: yellow;
-}
-
 /*===================section============*/
 
 #section {
@@ -201,6 +183,7 @@ body {
 /*===================aside============*/
 
 #aside {
+    width: 350px;
     background-color: mediumslateblue;
 }
 
@@ -222,6 +205,8 @@ body {
     background-color: olivedrab;
 }
 
+/*쪽지 기능*/
+
 
 
 
@@ -239,3 +224,40 @@ background-color: #883441;
 
 
 
+/*
+<div class="board-list">
+<div class="title">
+<strong>게시판</strong>
+</div>
+<div class="sub-list">
+<div>
+<a href="#">자유게시판</a>
+</div>
+<div>
+<a href="#">팁</a>
+</div>
+<div>
+<a href="#">1234</a>
+</div>
+</div>
+</div>
+
+.board-list-area {
+    padding: 15px; !*조절*!
+    background-color: indigo;
+    border: 2px solid #873340;
+    border-radius: 25px;
+}
+
+.board-list > .title {
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    background-color: white;
+}
+
+.board-list > .sub-list > div {
+    border: 1px solid grey;
+    background-color: yellow;
+}
+*/
