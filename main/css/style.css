@@ -1,14 +1,14 @@
 @import url(reset.css);
-@import url(media.css);
-@font-face {font-family:MalgunGothic; src:url(/fonts/MalgunGothic.eot);}
-@font-face {font-family:-apple-system; src:url(/fonts/-apple-system);}
+/*@import url(media.css);*/
+@font-face {font-family:MalgunGothic; src:url(../../fonts/MalgunGothic.eot);}
+@font-face {font-family:-apple-system; src:url(../../fonts/-apple-system);}
 
 html {
     font-size: 62.5%;
     font-family: Georgia, "Malgun Gothic", sans-serif;
-    background-color: #F0F0F0;
+    background-color: #F1F5FD;
 }
-
+/*#6A002E#540024*/
 /*
 .title { font-size: 40px; }
 .title__image { width: 10em; }
@@ -41,30 +41,63 @@ input:focus {
 /*게시판에 들어갈 것
 자유게시판, 정육 팁 게시판, 식육 실시간 시세? */
 
-#nav-inner, #header-inner, #footer-inner, #main-inner, #header-top #top-inner {
-    max-width: 108rem;
-    width: 108rem;
+#nav-inner, #header-inner, #footer-inner, #main-inner {
+    width: 135rem;
+    max-width: 135rem;
+}
+#header-top #top-inner {
+    width: 135rem;
+    max-width: 135rem;
 }
 
+#header-inner, #main-inner, #footer-inner {
+    border-radius: 12.5px;
+}
+.nav-board {
+    width: 10%;
+}
+#header-inner {
+    margin: 0 auto;
+}
+  #nav, #header-top{
+      margin: auto;
+      width: 100%;
+  }
+
+  #header, #main, #footer {
+      margin-top: 1rem;
+      margin-right: 1rem;
+      margin-left: 1rem;
+  }
 #nav {
-    border-bottom: 2px solid red;
+    background-color: white;
+    border-bottom: 1px solid black;
 }
 
-#header {
-    background-color: #820715;
+#header-inner {
+    background: #540024;
 }
 
 .banner-img {
-    background: url("pictures/1222.png");
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50rem;
+    height: 50rem;
     background-size: cover;
-    opacity: 0.6;
     z-index: -1;
 }
+
+.banner-img > img {
+    width: 70rem;
+    height: 40rem;
+}
+
 #nav-inner {
     display:flex;
     margin: auto;
     align-items: center;
-    height: 6rem;
+    height: 5rem;
 }
 
 /*----게시판 구현----*/
@@ -117,7 +150,7 @@ input:focus {
 
 .logo.name {
     font-family: -apple-system, sans-serif;;
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 700;
 
 }
@@ -132,11 +165,11 @@ input:focus {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 5.5rem;
+    height: 5rem;
     box-sizing: border-box;
     border-radius: 25px;
-    border: 4px solid #820715;
-    background-color: #ffffff;
+    border: 4px solid white;
+    background-color: #CCCCCC;
 }
 
 .search-inner-area {
@@ -196,12 +229,11 @@ input:focus {
 */
 
 /*=================header===========================*/
-#wrap, #header #nav {
+#wrap {
     width: 100%;
 }
 
 #header-top {
-    width: 100%; /*임시*/
     border-bottom: 1px solid grey;
 }
 
@@ -209,7 +241,7 @@ input:focus {
     display:flex;
     align-items: center;
     margin: auto;
-    padding: 5.5rem;
+    padding: 4rem;
 }
 
 .logo-search-wrap {
@@ -234,14 +266,13 @@ input:focus {
 /*=================main===========================*/
 
 #main {
-    width: 100%;
 }
 
 #main-inner {
     display: flex;
     margin: auto;
     height: 90rem;
-    background-color: palegreen;
+    background-color: #CCCCCC;
 }
 
 /*===================section============*/
@@ -262,7 +293,6 @@ input:focus {
 
 
 #footer {
-    margin-top: auto;
     width: 100%;
 }
 
@@ -309,9 +339,9 @@ background-color: #883441;
 </div>
 </div>
 </div>
-
+*/
 .board-list-area {
-    padding: 15px; !*조절*!
+    padding: 15px; /*!*조절*!*/
     background-color: indigo;
     border: 2px solid #873340;
     border-radius: 25px;
@@ -328,4 +358,48 @@ background-color: #883441;
     border: 1px solid grey;
     background-color: yellow;
 }
-*/
+
+
+
+@media screen and (max-width: 1920px) {
+    html{
+        font-size: 62.5%
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    html{
+        font-size: 52%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    html{
+        font-size: 41.5%
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    html{
+        font-size: 31%
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 20.5%
+    }
+
+    #aside {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #header-top {
+        display: none;
+    }
+    #aside {
+        display: none;
+    }
+}
