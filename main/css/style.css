@@ -1,25 +1,31 @@
 @import url(reset.css);
 /*@import url(media.css);*/
-@font-face {font-family:MalgunGothic; src:url(../../fonts/MalgunGothic.eot);}
-@font-face {font-family:-apple-system; src:url(../../fonts/-apple-system);}
+@font-face {font-family:'-apple-system'; font-style: normal; font-weight:100; src:url(../../fonts/SF-Pro.woff) format('woff');}
+@font-face {font-family:'-apple-system'; font-style: normal; font-weight:200; src:url(../../fonts/SF-Pro.woff) format('woff');}
+@font-face {font-family:'-apple-system'; font-style: normal; font-weight:300; src:url(../../fonts/SF-Pro.woff) format('woff');}
+@font-face {font-family:'-apple-system'; font-style: normal; font-weight:400; src:url(../../fonts/SF-Pro.woff) format('woff');}
+@font-face {font-family:'-apple-system'; font-style: normal; font-weight:500; src:url(../../fonts/SF-Pro.woff) format('woff');}
+@font-face {font-family:'-apple-system'; font-style: normal; font-weight:600; src:url(../../fonts/SF-Pro.woff) format('woff');}
+@font-face {font-family:'-apple-system'; font-style: normal; font-weight:700; src:url(../../fonts/SF-Pro.woff) format('woff');}
+@font-face {font-family:'pretendard'; font-style: normal; font-weight:100; src:url(../../fonts/pretendard-Regular.woff) format('woff');}
+@font-face {font-family:'pretendard'; font-style: normal; font-weight:200; src:url(../../fonts/pretendard-Regular.woff) format('woff');}
+@font-face {font-family:'pretendard'; font-style: normal; font-weight:300; src:url(../../fonts/pretendard-Regular.woff) format('woff');}
+@font-face {font-family:'pretendard'; font-style: normal; font-weight:400; src:url(../../fonts/pretendard-Regular.woff) format('woff');}
+@font-face {font-family:'pretendard'; font-style: normal; font-weight:500; src:url(../../fonts/pretendard-Regular.woff) format('woff');}
+@font-face {font-family:'pretendard'; font-style: normal; font-weight:600; src:url(../../fonts/pretendard-Regular.woff) format('woff');}
+@font-face {font-family:'pretendard'; font-style: normal; font-weight:700; src:url(../../fonts/pretendard-Regular.woff) format('woff');}
 
 html {
     font-size: 62.5%;
-    font-family: Georgia, "Malgun Gothic", sans-serif;
-    background-color: #F1F5FD;
+    background-color: #F4F8FE;
 }
+
 /*#6A002E#540024*/
 /*
 .title { font-size: 40px; }
 .title__image { width: 10em; }
 .title__text { font-size: 0.4em; }
 */
-
-body {
-    font-family: Georgia, "Malgun Gothic", sans-serif;;
-}
-
-
 
 * {
     box-sizing: border-box;
@@ -41,41 +47,73 @@ input:focus {
 /*게시판에 들어갈 것
 자유게시판, 정육 팁 게시판, 식육 실시간 시세? */
 
-#nav-inner, #header-inner, #footer-inner, #main-inner {
-    width: 135rem;
-    max-width: 135rem;
+#nav-inner, #header-inner, #footer-inner {
+    margin: 0 auto;
+    width: 124rem;
+    max-width: 124rem;
 }
-#header-top #top-inner {
-    width: 135rem;
-    max-width: 135rem;
+
+#header {
+    height: 50rem;
+}
+
+#header-inner {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 auto;
+    background: darkgoldenrod;
+}
+
+/*header-top 이너*/
+
+#top-inner {
+    width: 124rem;
+    max-width: 124rem;
+}
+
+#header-top {
+    background-color: #ffffff;
+    border-bottom: 1px solid #DDDDDD;
 }
 
 #header-inner, #main-inner, #footer-inner {
-    border-radius: 12.5px;
-}
-.nav-board {
-    width: 10%;
-}
-#header-inner {
-    margin: 0 auto;
-}
-  #nav, #header-top{
-      margin: auto;
-      width: 100%;
-  }
-
-  #header, #main, #footer {
-      margin-top: 1rem;
-      margin-right: 1rem;
-      margin-left: 1rem;
-  }
-#nav {
-    background-color: white;
-    border-bottom: 1px solid black;
 }
 
-#header-inner {
-    background: #540024;
+#nav, #header-top{
+    margin: auto;
+    width: 100%;
+}
+
+/*header 맨위 div*/
+
+#header-top #top-inner {
+    display:flex;
+    align-items: center;
+    margin: auto;
+    padding: 2rem;
+}
+#header-top-top {
+    background-color: darkred;
+    width: 100%;
+    height: 3.9rem;
+}
+
+.banner-text-wrap {
+    width: 50%;
+    height: 100%;
+    background-color: inherit;
+}
+
+.banner-text-wrap > h1, strong {
+    font-size: 5rem;
+    color: #FBF6F5;
+    /*opacity: 0.7;*/
+}
+
+.banner-img-wrap {
+    width: 50%;
+    height: 100%;
 }
 
 .banner-img {
@@ -86,57 +124,26 @@ input:focus {
     height: 50rem;
     background-size: cover;
     z-index: -1;
+    opacity: 0.8;
 }
 
-.banner-img > img {
-    width: 70rem;
-    height: 40rem;
+#header {
+    background: darkred;
+    margin-top: 3rem;
+}
+
+#nav {
+    font-family: 'pretendard', sans-serif;
+    font-weight: 700;
+    background-color: #F1F5FD;
 }
 
 #nav-inner {
     display:flex;
     margin: auto;
     align-items: center;
+    justify-content: space-between;
     height: 5rem;
-}
-
-/*----게시판 구현----*/
-
-.board-wrap {
-    font-family: -apple-system, sans-serif ;
-    font-size: 1.5rem;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-}
-
-.board-wrap > div {
-    border-right: 1px solid grey;
-    width: 18rem;
-}
-
-.menu-dropdown {
-    position : relative;
-    display : inline-block;
-}
-
-.dropdown-content {
-    display : none;
-    position : absolute;
-    z-index : 1; /*다른 요소들보다 앞에 배치*/
-}
-
-.dropdown-content div {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 
 /*----header-top 로고----*/
@@ -149,11 +156,16 @@ input:focus {
 }
 
 .logo.name {
-    font-family: -apple-system, sans-serif;;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
-
+    color: black;
 }
+
+.banner-img > img {
+    width: 50rem;
+    height: 50rem;
+}
+
 /*------검색창-----*/
 .search-wrap {
     width: 45rem;
@@ -169,7 +181,7 @@ input:focus {
     box-sizing: border-box;
     border-radius: 25px;
     border: 4px solid white;
-    background-color: #CCCCCC;
+    background-color: #D8E5F8;
 }
 
 .search-inner-area {
@@ -233,60 +245,138 @@ input:focus {
     width: 100%;
 }
 
-#header-top {
-    border-bottom: 1px solid grey;
-}
-
-#header-top #top-inner {
-    display:flex;
-    align-items: center;
-    margin: auto;
-    padding: 4rem;
-}
-
 .logo-search-wrap {
     display: flex;
     justify-content: center;
 }
 
-#header-inner {
-    display:flex;
-    margin: auto;
-}
-
 .banner-img-wrap {
-    width: 100%;
-}
-
-.semi-login-wrap {
-    width: 36rem;
 }
 
 /*================================================================*/
 /*=================main===========================*/
 
 #main {
-}
-
-#main-inner {
+    margin: 0 auto;
+    width: 100%;
     display: flex;
-    margin: auto;
-    height: 90rem;
-    background-color: #CCCCCC;
+    justify-content: center;
 }
 
+#main-wrap {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
 /*===================section============*/
 
 #section {
-    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 124rem;
+    height: 90rem;
+    background-color: mediumseagreen;
 }
 
 /*===================aside============*/
 
 #aside {
-    width: 36rem;
+    width: 35rem;
+    height: 90rem;
+    background-color: rosybrown;
 }
 
+#nav-sidebar {
+    padding: 2rem;
+    width: 35rem;
+    height: 90rem;
+    background-color: darkmagenta;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/*----게시판 구현----*/
+
+.nav-board-wrap {
+    position: sticky;
+    top: 1rem;
+}
+
+/*게시판 레이아웃*/
+
+.board-area {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    width: 25rem;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+/*게시판 자체 div*/
+
+.board {
+    /*!*조절*!*/
+    width: 20rem;
+    border: 1px solid black;
+    background-color: brown;
+}
+
+.board > .title {
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    background-color: white;
+}
+
+.board > .title > strong {
+    color: black;
+    font-size :1.5rem;
+}
+
+.board > .sub-list > div {
+    color: black;
+    font-size :1.5rem;
+    border: 1px solid grey;
+    background-color: yellow;
+}
+
+/*.board-a > div {
+    font-weight: 700;
+    font-size: 1.6rem;
+    background-color: burlywood;
+    width: 18rem;
+}*/
+
+/*
+.menu-dropdown {
+    position : relative;
+    display : inline-block;
+}
+
+.dropdown-content {
+    display : none;
+    position : absolute;
+    z-index : 1; !*다른 요소들보다 앞에 배치*!
+}
+
+.dropdown-content div {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+*/
 
 /*=============================================================*/
 /*============================footer==============================*/
@@ -340,24 +430,6 @@ background-color: #883441;
 </div>
 </div>
 */
-.board-list-area {
-    padding: 15px; /*!*조절*!*/
-    background-color: indigo;
-    border: 2px solid #873340;
-    border-radius: 25px;
-}
-
-.board-list > .title {
-    display: flex;
-    border: 1px solid black;
-    justify-content: center;
-    background-color: white;
-}
-
-.board-list > .sub-list > div {
-    border: 1px solid grey;
-    background-color: yellow;
-}
 
 
 
@@ -369,37 +441,28 @@ background-color: #883441;
 
 @media screen and (max-width: 1440px) {
     html{
-        font-size: 52%;
+        font-size: 57.5%;
     }
 }
 
 @media screen and (max-width: 1280px) {
     html{
-        font-size: 41.5%
+        font-size: 49.5%
     }
 }
 
 @media screen and (max-width: 1080px) {
     html{
-        font-size: 31%
+        font-size: 41.5%
     }
 }
 
 @media screen and (max-width: 768px) {
     html{
-        font-size: 20.5%
-    }
-
-    #aside {
-        display: none;
+        font-size: 38.5%
     }
 }
 
 @media screen and (max-width: 360px) {
-    #header-top {
-        display: none;
-    }
-    #aside {
-        display: none;
-    }
+
 }
