@@ -431,8 +431,9 @@ background-color: #883441;
 </div>
 */
 
+.article {
 
-
+}
 @media screen and (max-width: 1920px) {
     html{
         font-size: 62.5%
