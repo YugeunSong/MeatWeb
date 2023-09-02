@@ -321,7 +321,7 @@ input:focus {
 }
 
 /*게시판 자체 div*/
-
+/*부모요소의 관계 공부*/
 .board {
     /*!*조절*!*/
     width: 20rem;
@@ -431,9 +431,7 @@ background-color: #883441;
 </div>
 */
 
-.article {
 
-}
 @media screen and (max-width: 1920px) {
     html{
         font-size: 62.5%
