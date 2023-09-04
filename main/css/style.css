@@ -47,8 +47,13 @@ input:focus {
 /*게시판에 들어갈 것
 자유게시판, 정육 팁 게시판, 식육 실시간 시세? */
 
-#nav-inner, #header-inner, #footer-inner {
+#nav-inner, #header-inner {
     margin: 0 auto;
+    width: 124rem;
+    max-width: 124rem;
+}
+
+#footer-inner {
     width: 124rem;
     max-width: 124rem;
 }
@@ -68,16 +73,15 @@ input:focus {
 /*header-top 이너*/
 
 #top-inner {
+    margin: 0 auto;
     width: 124rem;
     max-width: 124rem;
 }
 
 #header-top {
+    margin: 0 auto;
     background-color: #ffffff;
     border-bottom: 1px solid #DDDDDD;
-}
-
-#header-inner, #main-inner, #footer-inner {
 }
 
 #nav, #header-top{
@@ -93,6 +97,7 @@ input:focus {
     margin: auto;
     padding: 2rem;
 }
+
 #header-top-top {
     background-color: darkred;
     width: 100%;
@@ -242,6 +247,7 @@ input:focus {
 
 /*=================header===========================*/
 #wrap {
+    margin: 0 auto;
     width: 100%;
 }
 
@@ -264,18 +270,21 @@ input:focus {
 }
 
 #main-wrap {
+    flex: 1;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 0 auto;
 }
 /*===================section============*/
 
 #section {
     display: flex;
-    margin: 0 auto;
     align-items: center;
     justify-content: center;
     width: 124rem;
+    min-width: 124rem;
+    max-width: 124rem;
     height: 90rem;
     background-color: mediumseagreen;
 }
@@ -283,14 +292,14 @@ input:focus {
 /*===================aside============*/
 
 #aside {
-    width: 35rem;
+    display: flex;
+    width:100%;
     height: 90rem;
     background-color: rosybrown;
 }
 
 #nav-sidebar {
-    padding: 2rem;
-    width: 35rem;
+    width: 100%;
     height: 90rem;
     background-color: darkmagenta;
     display: flex;
@@ -300,11 +309,6 @@ input:focus {
 
 /*----게시판 구현----*/
 
-.nav-board-wrap {
-    position: sticky;
-    top: 1rem;
-}
-
 /*게시판 레이아웃*/
 
 .board-area {
@@ -312,16 +316,17 @@ input:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 25px;
+    border: 1px solid #DEDEDE;
+    border-radius: 5rem;
     width: 25rem;
     padding: 2rem;
     position: sticky;
-    top: 0;
+    top: 2rem;
     background-color: white;
 }
 
 /*게시판 자체 div*/
-/*부모요소의 관계 공부*/
+
 .board {
     /*!*조절*!*/
     width: 20rem;
@@ -381,8 +386,8 @@ input:focus {
 /*=============================================================*/
 /*============================footer==============================*/
 
-
 #footer {
+    margin-top: auto;
     width: 100%;
 }
 
@@ -438,27 +443,33 @@ background-color: #883441;
     }
 }
 
+@media screen and (max-width: 1680px) {
+    html{
+        font-size: 50%;
+    }
+}
+
 @media screen and (max-width: 1440px) {
     html{
-        font-size: 57.5%;
+        font-size: 37.5%;
     }
 }
 
 @media screen and (max-width: 1280px) {
     html{
-        font-size: 49.5%
+        font-size: 20%
     }
 }
 
 @media screen and (max-width: 1080px) {
     html{
-        font-size: 41.5%
+        font-size: 20%
     }
 }
 
 @media screen and (max-width: 768px) {
     html{
-        font-size: 38.5%
+        font-size: 20%
     }
 }
 
