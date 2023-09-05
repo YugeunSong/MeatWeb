@@ -19,6 +19,9 @@ html {
     font-size: 62.5%;
     background-color: #F4F8FE;
 }
+html, body {
+    width:100%; height:100%;
+}
 
 /*#6A002E#540024*/
 /*
@@ -47,34 +50,48 @@ input:focus {
 /*게시판에 들어갈 것
 자유게시판, 정육 팁 게시판, 식육 실시간 시세? */
 
-#nav-inner, #header-inner {
+#nav-inner {
     margin: 0 auto;
-    width: 124rem;
+    width: 80rem;
+    max-width: 80rem;
+}
+
+#main-inner {
+    width: 106rem;
+    max-width: 124rem;
+}
+
+#header-inner {
+    width: 106rem;
     max-width: 124rem;
 }
 
 #footer-inner {
-    width: 124rem;
+    width: 106rem;
     max-width: 124rem;
 }
 
 #header {
-    height: 50rem;
+    width: 100%;
 }
 
 #header-inner {
     display:flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin: 0 auto;
-    background: darkgoldenrod;
 }
 
+.header-login {
+    width: 25rem;
+    height: 35rem;
+    background-color: darkorchid;
+}
 /*header-top 이너*/
 
 #top-inner {
     margin: 0 auto;
-    width: 124rem;
+    width: 106rem;
     max-width: 124rem;
 }
 
@@ -89,7 +106,7 @@ input:focus {
     width: 100%;
 }
 
-/*header 맨위 div*/
+/*header 맨  위 div*/
 
 #header-top #top-inner {
     display:flex;
@@ -105,31 +122,31 @@ input:focus {
 }
 
 .banner-text-wrap {
-    width: 50%;
+    width: 20rem;
     height: 100%;
     background-color: inherit;
 }
 
-.banner-text-wrap > h1, strong {
-    font-size: 5rem;
-    color: #FBF6F5;
-    /*opacity: 0.7;*/
-}
-
-.banner-img-wrap {
-    width: 50%;
-    height: 100%;
+.banner-img-text-wrap {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .banner-img {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 50rem;
-    height: 50rem;
+    width: 60rem;
+    height: 35rem;
     background-size: cover;
     z-index: -1;
-    opacity: 0.8;
+    opacity: 0.7;
+}
+
+.banner-img-wrap {
+    height:100%;
 }
 
 #header {
@@ -166,9 +183,28 @@ input:focus {
     color: black;
 }
 
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35rem;
+    font-family: "맑은 고딕", sans-serif ;
+    color: white;
+}
+
+.banner-text > h1 {
+    font-size: 3rem;
+}
+
+.banner-text > strong {
+    font-size: 2rem;
+}
+
 .banner-img > img {
-    width: 50rem;
-    height: 50rem;
+    overflow: hidden;
+    width: 80rem;
+    height: 35rem;
 }
 
 /*------검색창-----*/
@@ -198,7 +234,6 @@ input:focus {
 }
 
 .search-inner-area > img {
-    background-color: cadetblue;
     border: 1px solid darkgoldenrod;
 }
 
@@ -256,57 +291,110 @@ input:focus {
     justify-content: center;
 }
 
-.banner-img-wrap {
-}
-
 /*================================================================*/
 /*=================main===========================*/
 
 #main {
-    margin: 0 auto;
+    margin: auto;
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 #main-wrap {
-    flex: 1;
-    width: 100%;
     display: flex;
-    justify-content: center;
     margin: 0 auto;
+}
+
+#main-inner {
+    width: 106em;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
 }
 /*===================section============*/
 
 #section {
     display: flex;
+    flex-direction: column;
+    width: 80rem;
+    min-width: 80rem;
+    max-width: 80rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 124rem;
-    min-width: 124rem;
-    max-width: 124rem;
-    height: 90rem;
-    background-color: mediumseagreen;
+    width: 39.5rem;
+    height: 39.5rem;
+    margin-top : 1rem;
+    margin-left: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: rgb(0 0 0 / 4%) 0 0.125rem 0.625rem 0;
+    overflow: hidden;
+    border: 0.0625rem solid #dedede;
+} /*10개씩 나오게 하기*/
+/*
+.first {
+    margin-left: 1rem;
+}
+*/
+
+.container > div {
+    margin-bottom: 1rem;
+}
+
+.board-name {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    height: 3.25rem;
+    width: 100%;
+    font-size: 2rem;
+    background-color: #C06570;
+}
+
+.best-post > div {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+}
+
+.best-post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.3rem;
+}
+
+.floor {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
 }
 
 /*===================aside============*/
 
 #aside {
     display: flex;
-    width:100%;
-    height: 90rem;
-    background-color: rosybrown;
+    width: 25rem;
+    justify-content: center;
+    border: 1px solid black;
 }
 
 #nav-sidebar {
-    width: 100%;
-    height: 90rem;
-    background-color: darkmagenta;
+    padding: 1rem;
+    height: 100%;
     display: flex;
-    justify-content: flex-end;
-    position: relative;
+    position: absolute;
+    right: 106rem;
+    margin: 0 auto;
 }
-
+/*width를 fluid로 한다 (%, em등)*/
 /*----게시판 구현----*/
 
 /*게시판 레이아웃*/
@@ -316,13 +404,12 @@ input:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #DEDEDE;
-    border-radius: 5rem;
+    border: 0.0625rem solid #dedede;
+    border-radius: 0.75rem;
     width: 25rem;
     padding: 2rem;
     position: sticky;
     top: 2rem;
-    background-color: white;
 }
 
 /*게시판 자체 div*/
@@ -393,7 +480,7 @@ input:focus {
 
 #footer-inner {
     margin: auto;
-    height: 20rem;
+    height: 40rem;
     background-color: olivedrab;
 }
 
