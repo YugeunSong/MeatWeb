@@ -1,4 +1,5 @@
 @import url(reset.css);
+@import url(main.js);
 /*@import url(media.css);*/
 @font-face {font-family:'-apple-system'; font-style: normal; font-weight:100; src:url(../../fonts/SF-Pro.woff) format('woff');}
 @font-face {font-family:'-apple-system'; font-style: normal; font-weight:200; src:url(../../fonts/SF-Pro.woff) format('woff');}
@@ -346,6 +347,7 @@ input:focus {
     width: 80rem;
     min-width: 80rem;
     max-width: 80rem;
+    height: 80rem;
 }
 
 .container {
@@ -357,9 +359,10 @@ input:focus {
     margin-top : 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    overflow: hidden;
     /*border-radius: 0.75rem;*/
     /*box-shadow: rgb(0 0 0 / 4%) 0 0.125rem 0.625rem 0;*/
-    overflow: hidden;
+
     /*border: 0.0625rem solid #dedede;*/
 } /*10개씩 나오게 하기*/
 
@@ -387,7 +390,6 @@ input:focus {
     height: 3.25rem;
     width: 100%;
     font-size: 1.5rem;
-    border-bottom: 2px solid black;
 }
 
 .best-post > div {
@@ -476,14 +478,13 @@ input:focus {
 
 /*인기글 미리보기*/
 
-.board-list {
-    padding: 1rem;
+.board-component {
     width: 100%;
     display: flex;
     border-bottom: 0.0625rem solid #dedede;
 }
 
-.board-list > div {
+.board-component > div {
     display: flex;
     justify-content: center;
 }
@@ -520,6 +521,104 @@ input:focus {
     width: 15%;
 }
 
+/*--------------------------------------------------------------*/
+/*게시글 요소*/
+
+.board-component  {
+    width: 100%;
+    display: flex;
+    border-bottom: 0.0625rem solid #dedede;
+    font-size: 1.5rem;
+}
+
+.board-component  > div {
+    display: flex;
+    justify-content: center;
+    padding: 0.6rem;
+}
+
+.board-component.top {
+    background-color: darkgrey;
+}
+
+.board-component.top > div.title {
+    display: flex;
+    justify-content: center;
+}
+
+.board-component .num {
+    width: 10%;
+}
+
+.board-component .title {
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.board-component .writer {
+    width: 10%;
+}
+
+.board-component .date {
+    width: 10%;
+}
+
+.board-component .count {
+    width: 10%;
+}
+
+.board-component .good {
+    width: 10%;
+}
+
+.board-component .comment-num {
+    color:red;
+}
+
+.board-component .category {
+    width: 15%;
+}
+
+/*-------------------------------------------------------------------------*/
+/*페이지 넘기기 버튼*/
+
+.board-pagination {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.board-pagination .wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.board-pagination > div > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+    border: 1px solid grey;
+    line-height: 1.5;
+}
+
+.board-pagination > div > a:hover {
+    background-color: darkgrey;
+}
+
+.board-pagination > a.active {
+    cursor: default;
+    background-color: darkslategray;
+    color: white;
+}
+
+.board-pagination > a:active {
+    outline: none;
+}
+
+
 /*.board-a > div {
     font-weight: 700;
     font-size: 1.6rem;
@@ -549,6 +648,63 @@ input:focus {
     display: block;
 }
 */
+/*글쓰기 페이지*/
+
+#board-post-wrap {
+    display: none;
+}
+
+.board-post {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.btn-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.board-post > div {
+    margin-top: 1rem;
+}
+
+.main-title > strong {
+    font-size: 1.6rem;
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post > input, textarea {
+    width: 75rem;
+}
+
+.post > textarea {
+    height: 50rem;
+}
+
+/*전송 취소 버튼 레이아웃*/
+
+.btn-default {
+    margin: 0.6rem;
+    border: 0;
+    width: 10rem;
+    padding: 0.3rem;
+    background-color: grey;
+    color: white;
+    font-size: 1.3rem;
+}
+
 
 /*=============================================================*/
 /*============================footer==============================*/
@@ -576,45 +732,18 @@ input:focus {
     padding: 0.7rem;
 }
 
-/*쪽지 기능*/
+/*글쓰기 버튼*//*버튼클릭시 레이아웃 전환*/
+.board-top {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
 
+.btn-wrap {
+    display: flex;
+}
 
-
-
-
-/*
-
-font 설정하기 메인 로고랑 게시글부분이랑 따로
-.header {
-background-color: #883441;
-    background-color: #F5B0B9;
-    background-color: #EB6173;
-    background-color: #FAD8DC;
-    background-color: #FAD7DC
-    background-color: #C06570;
-}*/
-
-
-
-/*
-<div class="board-list">
-<div class="title">
-<strong>게시판</strong>
-</div>
-<div class="sub-list">
-<div>
-<a href="#">자유게시판</a>
-</div>
-<div>
-<a href="#">팁</a>
-</div>
-<div>
-<a href="#">1234</a>
-</div>
-</div>
-</div>
-*/
-
+/*---------------------------------------------------------------------*/
 @media screen and (max-width: 1920px){
     html {
         font-size: 62.5%
