@@ -524,9 +524,15 @@ input:focus {
 /*--------------------------------------------------------------*/
 /*게시글 요소*/
 
+#posts {
+    display: flex;
+    flex-direction: column;
+}
+
 .board-component  {
     width: 100%;
     display: flex;
+
     border-bottom: 0.0625rem solid #dedede;
     font-size: 1.5rem;
 }
@@ -583,17 +589,14 @@ input:focus {
 /*페이지 넘기기 버튼*/
 
 .board-pagination {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-.board-pagination .wrap {
-    display: flex;
-    justify-content: center;
-}
-
-.board-pagination > div > a {
+.board-pagination > button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -604,20 +607,9 @@ input:focus {
     line-height: 1.5;
 }
 
-.board-pagination > div > a:hover {
+.board-pagination > button:hover {
     background-color: darkgrey;
 }
-
-.board-pagination > a.active {
-    cursor: default;
-    background-color: darkslategray;
-    color: white;
-}
-
-.board-pagination > a:active {
-    outline: none;
-}
-
 
 /*.board-a > div {
     font-weight: 700;
