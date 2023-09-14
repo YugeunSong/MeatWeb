@@ -373,11 +373,6 @@ input:focus {
     /*box-shadow: rgb(0 0 0 / 4%) 0 0.125rem 0.625rem 0;*/
     /*border: 0.0625rem solid #dedede;*/
 } /*10개씩 나오게 하기*/
-/*
-.first {
-    margin-left: 1rem;
-}
-*/
 
 .container > div {
     margin-bottom: 5px;
@@ -430,7 +425,6 @@ input:focus {
     right: 106rem;
     margin: 0 auto;
 }
-/*width를 fluid로 한다 (%, em등)*/
 /*----게시판 구현----*/
 
 /*게시판 레이아웃*/
@@ -611,35 +605,14 @@ input:focus {
     background-color: darkgrey;
 }
 
-/*.board-a > div {
-    font-weight: 700;
-    font-size: 1.6rem;
-    background-color: burlywood;
-    width: 18rem;
-}*/
-
-/*
-.menu-dropdown {
-    position : relative;
-    display : inline-block;
+.board-pagination > button.active {
+    background-color: black;
+    color: white;
 }
 
-.dropdown-content {
-    display : none;
-    position : absolute;
-    z-index : 1; !*다른 요소들보다 앞에 배치*!
+.board-pagination > button.active:hover {
+    background-color: darkgrey;
 }
-
-.dropdown-content div {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-*/
 /*글쓰기 페이지*/
 
 #board-post-wrap {
