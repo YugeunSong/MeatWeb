@@ -73,31 +73,35 @@ function showPost (startPage, totalPosts, postsPerPage) {
 function showNumPage() {
     let active = document.querySelector(".active");
     active.classList.remove('active');
-    this.classList.add('active'); /*active 변경*/
+    this.classList.add('active');
+
+    let pageNum = parseInt(this.innerText); // 클릭한 버튼의 페이지 번호
+    let startPost = (pageNum - 1) * postsPerPage + 1;
+    let endPost = Math.min(pageNum * postsPerPage, totalPosts);
+
+    // 게시글 영역 초기화
+    posts.innerHTML = '';
+
+    // 선택한 페이지의 게시글 보여주기
+    for(let i = startPost; i <= endPost; i++) {
+        addPosts(i, "제목", "작성자", "날짜", "조회수", "추천");
+    }
 }
 
-/*let numPageBtn = document.getElementsByClassName('numBtn'); // 다른 페이지로 이동하는 버튼들
-
-for (let i = 0; i < numPageBtn.length; i++) {
-    numPageBtn[i].addEventListener('click', showNumPage);
-}*/
 function showNumBtn(startPage, totalPosts, postsPerPage) {
     let next = document.getElementById('next');/*버튼 생성*/
     let numPageBtn = document.getElementsByClassName('numBtn');
 
     for(let i = startPage; i <= Math.ceil(totalPosts/postsPerPage); i++) {
         let button = document.createElement('button');
-        button[i].classList.add('numBtn');
+        button.classList.add('numBtn');
 
-        if(i === 1) {
-            button[i].classList.add('active'); // 현재페이지일 때 버튼에 active 클래스 추가
-            button[i].innerText = i;
-            next.before(button[i]);
+        if(i === startPage) {
+            button.classList.add('active');
         }
-        else {
-            button[i].innerText = i;
-            next.before(button[i]);
-        }
+
+        button.innerText = i;
+        next.before(button);
     }
 
     for (let i = 0; i < numPageBtn.length; i++) {
@@ -111,7 +115,7 @@ showNumBtn(startPage, totalPosts, postsPerPage);
 /*한 페이지에 10개씩 남은 게시물들은 다음 페이지로*/
 
 
-/*function showFirstPage(startPage, totalPosts, postsPerPage) {
+function showFirstPage(startPage, totalPosts, postsPerPage) {
     startPage = 1;
     showPost(startPage, totalPosts, postsPerPage);
 }
@@ -129,10 +133,9 @@ function showNextPage(startPage, totalPosts, postsPerPage) {
 function showLastPage(startPage, totalPosts, postsPerPage) {
     startPage = totalPosts;
     showPost(startPage, totalPosts, postsPerPage);
-}*/
+}
 /*클릭된 버튼 active 클래스 추가 및 이전 active 클래스 제거*/
 
-/*
 let firstPageBtn = document.getElementById('first'); // 처음 페이지로 이동하는 버튼
 firstPageBtn.addEventListener('click', showFirstPage);
 let prevPageBtn = document.getElementById('prev'); // 이전 페이지로 이동하는 버튼
@@ -140,4 +143,4 @@ prevPageBtn.addEventListener('click', showPrevPage);
 let nextPageBtn = document.getElementById('next'); // 다음 페이지로 이동하는 버튼
 nextPageBtn.addEventListener('click', showNextPage);
 let lastPageBtn = document.getElementById('last'); // 마지막 페이지로 이동하는 버튼
-lastPageBtn.addEventListener('click', showLastPage);*/
+lastPageBtn.addEventListener('click', showLastPage);

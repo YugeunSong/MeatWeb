@@ -478,10 +478,6 @@ input:focus {
     border-bottom: 0.0625rem solid #dedede;
 }
 
-.board-component > div {
-    display: flex;
-    justify-content: center;
-}
 .best-post .num {
     width: 10%;
 }
@@ -521,6 +517,7 @@ input:focus {
 #posts {
     display: flex;
     flex-direction: column;
+    margin:0;
 }
 
 .board-component  {
