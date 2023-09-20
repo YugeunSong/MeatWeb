@@ -135,11 +135,13 @@ header > div > div.login > ul > li { /*헤더 로그인 회원가입 가로 정�
 
 /*==============================================================*/
 /*하단 페이지*/
+
 .board-page {
     margin-top: 30px;
     font-size: 0;
     text-align: center;
 }
+
 .board-page a {
     display: inline-block;
     width: 32px;

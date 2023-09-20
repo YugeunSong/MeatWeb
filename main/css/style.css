@@ -548,7 +548,7 @@ input:focus {
 }
 
 .board-component .title {
-    width: 50%;
+    width: 58%;
     justify-content: flex-start;
 }
 
@@ -557,7 +557,7 @@ input:focus {
 }
 
 .board-component .date {
-    width: 10%;
+    width: 8%;
 }
 
 .board-component .count {

@@ -24,6 +24,14 @@ let startPage = 1; /*시작페이지*/
 
 /*게시글의 양식*/
 function addPosts (num, title, writer, date, count, good) {
+    let today = new Date();
+    let year = today.getFullYear(); // 년도
+    let month = today.getMonth() + 1;  // 월
+    let day = today.getDate();  // 날짜
+    let hours = today.getHours(); // 시
+    let minutes = today.getMinutes();  // 분
+    let randomCount = Math.floor(Math.random() * 101); /*임시 랜덤값*/
+    let randomGood = Math.floor(Math.random() * 101);
 
     let components = document.createElement('div');
     components.classList.add('board-component'); // 클래스 추가
@@ -42,15 +50,15 @@ function addPosts (num, title, writer, date, count, good) {
 
     let postDate = document.createElement('div');
     postDate.classList.add('date')
-    postDate.innerText = date;
+    postDate.innerText = month+'/'+day;
 
     let postCount = document.createElement('div');
     postCount.classList.add('count')
-    postCount.innerText = count;
+    postCount.innerText = randomCount;
 
     let postGood = document.createElement('div');
     postGood.classList.add('good')
-    postGood.innerText = good;
+    postGood.innerText = randomGood;
 
     components.appendChild(postNumber);
     components.appendChild(postTitle);
@@ -61,6 +69,8 @@ function addPosts (num, title, writer, date, count, good) {
 
     posts.appendChild(components);
 }
+
+/*게시글들을 담는 공간*/
 
 /*게시글 추가 기능*/
 function showPost (startPage, totalPosts, postsPerPage) {
